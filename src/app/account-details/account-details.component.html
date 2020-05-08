@@ -1,0 +1,48 @@
+<h2>Account Details</h2>
+
+<hr/>
+<div *ngIf="account">
+  <div>
+    <label><b>Account Id: </b></label> {{account.id}}
+  </div>
+  <div>
+    <label><b>Balance: </b></label> {{account.balance}}
+  </div>
+  <div>
+    <label><b>User Id: </b></label> {{account.userId}}
+  </div>
+  <div>
+    <label><b>Created at: </b></label> {{account.createdAt}}
+  </div>
+  <div>
+    <label><b>Last updated: </b></label> {{account.lastUpdated}}
+  </div>
+  <br>
+  <br>
+  <div>
+    <h4>Transactions</h4>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Time</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let transaction of account.transactions ">
+        <td>{{transaction.id}}</td>
+        <td>{{transaction.transactionAmount}}</td>
+        <td>{{transaction.transactionType}}</td>
+        <td>{{transaction.transactionTime}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Customer List</button><br>
+
+

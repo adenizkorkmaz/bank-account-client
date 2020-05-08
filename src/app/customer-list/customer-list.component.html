@@ -1,0 +1,57 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Customer Info</th>
+        <th>Accounts</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let customer of customers ">
+        <td>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Customer Id</th>
+              <th>Customer Name</th>
+              <th>Created At</th>
+              <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>{{customer.id}}</td>
+              <td>{{customer.name}}</td>
+              <td>{{customer.createdAt}}</td>
+              <td><button (click)="createAccount(customer.id)" class="btn btn-danger">New Account</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </td>
+        <td><table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Account Id</th>
+            <th>Created At</th>
+            <th>Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let account of customer.accountList ">
+            <td>{{account.id}}</td>
+            <td>{{account.createdAt}}</td>
+            <td><button (click)="accountDetails(account.id)" class="btn btn-danger">Details</button>
+            </td>
+          </tr>
+          </tbody>
+        </table></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
