@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {AccountService} from '../account.service';
+import {AccountService} from '../service/account.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {AccountCreate} from '../accountCreate';
+import {AccountCreate} from '../model/accountCreate';
 import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({

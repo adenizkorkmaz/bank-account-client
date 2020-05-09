@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {AccountCreate} from './accountCreate';
+import {AccountCreate} from '../model/accountCreate';
 
 @Injectable({
   providedIn: 'root'

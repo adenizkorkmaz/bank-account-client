@@ -5,6 +5,7 @@ export class Account {
   public id: number;
   public userId: number;
   public balance: number;
+  public currency: Currency;
   public current: boolean;
   public createdAt: Date;
   public lastUpdated: Date;
@@ -14,4 +15,6 @@ export class Account {
   }
 
 }
+
+export type Currency = 'EURO';
 

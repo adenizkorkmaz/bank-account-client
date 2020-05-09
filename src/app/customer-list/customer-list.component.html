@@ -36,6 +36,7 @@
           <thead>
           <tr>
             <th>Account Id</th>
+            <th>Current</th>
             <th>Created At</th>
             <th>Actions</th>
           </tr>
@@ -43,6 +44,8 @@
           <tbody>
           <tr *ngFor="let account of customer.accountList ">
             <td>{{account.id}}</td>
+            <td *ngIf="account.current">Yes</td>
+            <td *ngIf="!account.current">No</td>
             <td>{{account.createdAt}}</td>
             <td><button (click)="accountDetails(account.id)" class="btn btn-danger">Details</button>
             </td>

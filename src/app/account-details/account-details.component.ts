@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {AccountService} from '../account.service';
-import {Account} from '../account';
+import {AccountService} from '../service/account.service';
+import {Account} from '../model/account';
 
 @Component({
   selector: 'app-account-details',
